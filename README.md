@@ -17,7 +17,7 @@ A lightweight, zero-dependency Python utility designed to merge multiple split G
 
  
 
-## 🚀 Getting Started
+## 🚀 Step 1: Getting Started
 
 ### 1. Prerequisites
 
@@ -54,7 +54,7 @@ cd Google_takeout_organizer
 
  
 
-## ⚙️ Configuration & Parameter Setup
+## ⚙️ Step 2: Configuration & Parameter Setup
 
 Before running the script, you need to tell it where your files are located. Open the script (`google_takeout_organizer.py`) in any text editor or IDE and locate the `  START CONFIGURATION  ` block.
 
@@ -77,7 +77,7 @@ COPY_JSON_FILES = False
 
  
 
-## 💻 How to run the script
+## 💻 Step 3: Run the script
 
 Once your configuration is saved, open your terminal/command prompt, navigate to the script's directory, and execute it.
 
