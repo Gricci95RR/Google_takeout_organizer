@@ -1,7 +1,3 @@
-Here is the modified `README.md`. I have added a clean **Table of Contents** at the top and moved the **Google Takeout Download Guide** to the very end of the file as requested.
-
- 
-
 # Google Takeout Organizer
 
 A lightweight, zero-dependency Python utility designed to merge multiple split Google Takeout "Google Photos" archives into a single, organized directory.
