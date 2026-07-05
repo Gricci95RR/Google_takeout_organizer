@@ -2,19 +2,42 @@
 
 A lightweight, zero-dependency Python utility designed to merge multiple split Google Takeout "Google Photos" archives into a single, organized directory.
 
----
+## 📦 1. Preparing your Google Takeout Data
 
-## Getting Started
+Because large photo libraries are often split into multiple `.zip` archives by Google, follow these steps exactly to export your data correctly before running the script:
+
+1. **Go to Google Takeout:** Open your browser and navigate to [takeout.google.com](https://takeout.google.com).
+2. **Select Only Google Photos:**
+* Click **Deselect all** at the top of the list to uncheck other Google services.
+* Scroll down to find **Google Photos** and check the box next to it.
+* *(Optional)* Click **All photo albums included** to filter out specific years or albums you don't want to download.
+
+
+3. **Configure Export Settings:** Scroll to the bottom of the page and click **Next step**.
+4. **Choose Destination & Frequency:** Set your destination (usually *Transfer to email/Download link*) and frequency (*Export once*).
+5. **Set File Type & Size (Crucial):**
+* Leave File type as **.zip**.
+* Change the **File size** dropdown to **50 GB**. *Choosing a larger size like 50 GB prevents Google from splitting your library into dozens small zip files.*
+
+
+6. **Create Export:** Click **Create export**. Google will compile your photos and email you when the download links are ready.
+7. **Download & Extract:** * Download all the provided ZIP files to your computer.
+* **Unzip/Extract all files** completely using your system's built-in extractor, or tools like 7-Zip (Windows) / Unarchive (Mac).
+* *Note down the paths of the extracted folders containing `/Takeout/Google Photos`—you will need them for the script configuration!*
+
+## 🚀 Getting Started
 
 ### 1. Prerequisites
 
 You only need **Python 3.6 or higher** installed on your system.
 
 * **Check Python installation:** Open your terminal or command prompt and run:
+
 ```bash
 python --version
 
 ```
+
 *(Note: On some macOS/Linux systems, you may need to use `python3 --version`)*
 
 ### 2. Downloading the Repository
@@ -37,8 +60,6 @@ cd Google_takeout_organizer
 2. Select **Download ZIP**.
 3. Extract the ZIP file anywhere on your computer and open that folder.
 
----
-
 ## ⚙️ Configuration & Parameter Setup
 
 Before running the script, you need to tell it where your files are located. Open the script (`google_takeout_organizer.py`) in any text editor or IDE and locate the `--- START CONFIGURATION ---` block.
@@ -60,26 +81,20 @@ COPY_JSON_FILES = False
 
 ```
 
----
-
-## How to Use
+## 💻 How to run the script
 
 Once your configuration is saved, open your terminal/command prompt, navigate to the script's directory, and execute it.
 
 * **On Windows:**
+
 ```cmd
 python main.py
 
 ```
 
-
 * **On macOS / Linux:**
+
 ```bash
 python3 main.py
 
 ```
-
-1. The script will safely scan each source directory.
-2. It will recreate your album structures inside your destination directory.
-3. If a file already exists in the destination folder, **it will skip it** to save time and prevent duplicates.
-4. You will see a live console log of files being copied, skipped, or omitted.
