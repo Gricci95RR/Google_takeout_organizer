@@ -119,3 +119,7 @@ Because large photo libraries are often split into multiple `.zip` archives by G
 7. **Download & Extract:** * Download all the provided ZIP files to your computer.
 * **Unzip/Extract all files** completely using your system's built-in extractor, or tools like 7-Zip (Windows) / Unarchive (Mac).
 * *Note down the paths of the extracted folders containing `/Takeout/Google Photos`—you will need them for the script configuration!*
+
+--
+
+Created by [Gianmarco Ricci].
